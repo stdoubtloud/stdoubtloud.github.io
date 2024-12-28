@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blender Shortcut Keys</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            color: #333;
+        }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            border: 2px solid #0056b3;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+        }
+        h1 {
+            color: #0056b3;
+        }
+        .columns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .column {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: left;
+        }
+        .section {
+            margin-bottom: 20px;
+            border: 1px solid #0056b3;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .section h2 {
+            background-color: #f0f8ff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #e0f7fa;
+            margin-bottom: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        ul li .desc {
+            font-weight: bold;
+            color: #00796b;
+        }
+        ul li .shortcut {
+            color: #0056b3;
+        }
+        .footnote {
+            text-align: left;
+            color: #0056b3;
+            margin-top: -10px;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+        .footnote a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Blender Shortcut Keys</h1>
+        
+        <div class="columns">
+            <div class="column">
+                <div class="section">
+                    <h2>File Menu:</h2>
+                    <ul>
+                        <li><span class="desc">New File:</span> <span class="shortcut">Ctrl + N</span></li>
+                        <li><span class="desc">Open File:</span> <span class="shortcut">Ctrl + O</span></li>
+                        <li><span class="desc">Save File:</span> <span class="shortcut">Ctrl + S</span></li>
+                        <li><span class="desc">Save File As…:</span> <span class="shortcut">Shift + Ctrl + S</span></li>
+                        <li><span class="desc">Quit Blender:</span> <span class="shortcut">Ctrl + Q</span></li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Edit Menu:</h2>
+                    <ul>
+                        <li><span class="desc">Undo:</span> <span class="shortcut">Ctrl + Z</span></li>
+                        <li><span class="desc">Redo:</span> <span class="shortcut">Ctrl + Y</span></li>
+                        <li><span class="desc">Repeat Last Action:</span> <span class="shortcut">Shift + R</span></li>
+                        <li><span class="desc">Menu Search:</span> <span class="shortcut">F3</span></li>
+                        <li><span class="desc">Rename:</span> <span class="shortcut">F2</span></li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Render Menu:</h2>
+                    <ul>
+                        <li><span class="desc">Render Image:</span> <span class="shortcut">F12</span></li>
+                        <li><span class="desc">Render Animation:</span> <span class="shortcut">Ctrl + F12</span></li>
+                        <li><span class="desc">View Image:</span> <span class="shortcut">F11</span></li>
+                        <li><span class="desc">View Animation:</span> <span class="shortcut">Ctrl + F11</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="section">
+                    <h2>Window Menu:</h2>
+                    <ul>
+                        <li><span class="desc">Next Workspace:</span> <span class="shortcut">Ctrl + Page Down</span></li>
+                        <li><span class="desc">Previous Workspace:</span> <span class="shortcut">Ctrl + Page Up</span></li>
+                        <li><span class="desc">Move (or Grab) Object:</span> <span class="shortcut">G</span></li>
+                        <li><span class="desc">Rotate Object:</span> <span class="shortcut">R</span></li>
+                        <li><span class="desc">Scale Object:</span> <span class="shortcut">S</span></li>
+                        <li><span class="desc">Open the Add Menu:</span> <span class="shortcut">Shift + A</span></li>
+                        <li><span class="desc">Rotate View:</span> <span class="shortcut">Press the middle mouse button and drag.</span></li>
+                        <li><span class="desc">Pan View:</span> <span class="shortcut">Shift + Middle Mouse Button</span></li>
+                        <li><span class="desc">Zoom View:</span> <span class="shortcut">Mouse Scroll Wheel</span></li>
+                        <li><span class="desc">Duplicate:</span> <span class="shortcut">Shift + D</span></li>
+                        <li><span class="desc">Switch Between Edit Mode and Object Mode:</span> <span class="shortcut">Tab</span></li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Shortcuts in Edit Mode:</h2>
+                    <ul>
+                        <li><span class="desc">Extrude:</span> <span class="shortcut">E</span></li>
+                        <li><span class="desc">Fill:</span> <span class="shortcut">F</span></li>
+                        <li><span class="desc">Bevel:</span> <span class="shortcut">Ctrl + B</span></li>
+                        <li><span class="desc">Loop Cut and Slide:</span> <span class="shortcut">Ctrl + R</span></li>
+                        <li><span class="desc">Select Linked Vertices:</span> <span class="shortcut">L</span></li>
+                        <li><span class="desc">Deselect Linked Vertices:</span> <span class="shortcut">Shift + L</span></li>
+                        <li><span class="desc">Unwrap Mesh:</span> <span class="shortcut">U</span></li>
+                        <li><span class="desc">Enable Proportional Editing:</span> <span class="shortcut">O</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footnote">
+            <a href="https://docs.blender.org/manual/en/latest/interface/keymap/introduction.html">More shortcuts available here</a>
+        </div>
+    </div>
+</body>
+</html>
