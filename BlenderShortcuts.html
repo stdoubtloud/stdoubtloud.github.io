@@ -37,6 +37,19 @@
             padding: 10px;
             text-align: left;
         }
+        @media (max-width: 768px) {
+            .column {
+                width: 50%;
+            }
+        }
+        @media (max-width: 480px) {
+            .columns {
+                flex-direction: column;
+            }
+            .column {
+                width: 100%;
+            }
+        }
         .section {
             margin-bottom: 20px;
             border: 1px solid #0056b3;
