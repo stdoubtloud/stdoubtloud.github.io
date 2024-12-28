@@ -14,7 +14,7 @@
         }
         .container {
             width: 100%;
-            max-width: 900px;
+            max-width: 1200px;
             margin: auto;
             text-align: center;
             border: 2px solid #0056b3;
@@ -29,10 +29,10 @@
         .columns {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between;
         }
         .column {
-            width: 50%;
+            width: 33%;
             box-sizing: border-box;
             padding: 10px;
             text-align: left;
@@ -70,7 +70,7 @@
         .footnote {
             text-align: left;
             color: #0056b3;
-            margin-top: -10px;
+            margin-top: 20px;
             position: absolute;
             bottom: 20px;
             left: 20px;
@@ -99,17 +99,6 @@
                 </div>
 
                 <div class="section">
-                    <h2>Edit Menu:</h2>
-                    <ul>
-                        <li><span class="desc">Undo:</span> <span class="shortcut">Ctrl + Z</span></li>
-                        <li><span class="desc">Redo:</span> <span class="shortcut">Ctrl + Y</span></li>
-                        <li><span class="desc">Repeat Last Action:</span> <span class="shortcut">Shift + R</span></li>
-                        <li><span class="desc">Menu Search:</span> <span class="shortcut">F3</span></li>
-                        <li><span class="desc">Rename:</span> <span class="shortcut">F2</span></li>
-                    </ul>
-                </div>
-
-                <div class="section">
                     <h2>Render Menu:</h2>
                     <ul>
                         <li><span class="desc">Render Image:</span> <span class="shortcut">F12</span></li>
@@ -121,6 +110,17 @@
             </div>
 
             <div class="column">
+                <div class="section">
+                    <h2>Edit Menu:</h2>
+                    <ul>
+                        <li><span class="desc">Undo:</span> <span class="shortcut">Ctrl + Z</span></li>
+                        <li><span class="desc">Redo:</span> <span class="shortcut">Ctrl + Y</span></li>
+                        <li><span class="desc">Repeat Last Action:</span> <span class="shortcut">Shift + R</span></li>
+                        <li><span class="desc">Menu Search:</span> <span class="shortcut">F3</span></li>
+                        <li><span class="desc">Rename:</span> <span class="shortcut">F2</span></li>
+                    </ul>
+                </div>
+
                 <div class="section">
                     <h2>Window Menu:</h2>
                     <ul>
@@ -137,7 +137,9 @@
                         <li><span class="desc">Switch Between Edit Mode and Object Mode:</span> <span class="shortcut">Tab</span></li>
                     </ul>
                 </div>
+            </div>
 
+            <div class="column">
                 <div class="section">
                     <h2>Shortcuts in Edit Mode:</h2>
                     <ul>
