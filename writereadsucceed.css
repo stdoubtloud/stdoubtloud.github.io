@@ -30,6 +30,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .hero-section {
@@ -54,9 +55,11 @@ nav ul li a {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 section {
+    display: none;
     padding: 40px 20px;
     text-align: center;
 }
