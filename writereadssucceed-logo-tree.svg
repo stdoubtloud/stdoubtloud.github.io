@@ -200,7 +200,7 @@
   </g>
   <!-- Book 5 (hanging lower right) -->
   <g
-     transform="rotate(5,-1677.517,2345.3784)"
+     transform="rotate(5,-1630.1301,2356.1054)"
      id="g19">
     <rect
        x="-15"
@@ -236,11 +236,6 @@
        stroke-width="2"
        id="line19" />
     <!-- String connecting to branch -->
-    <path
-       d="M 0,-10 V -20"
-       stroke="#666666"
-       stroke-width="1"
-       id="path19" />
   </g>
   <!-- Text elements -->
   <text
