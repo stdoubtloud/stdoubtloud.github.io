@@ -2,8 +2,8 @@
 :root {
     --primary-color: #4a6fa5;
     --primary-dark: #345481;
-    --secondary-color: #e67e22;
-    --light-color: #f4f4f4;
+    --secondary-color: #f5a742;
+    --light-color: #f4f9ff;
     --dark-color: #333;
     --max-width: 1200px;
 }
@@ -23,6 +23,11 @@ body {
     line-height: 1.6;
     color: var(--dark-color);
     background-color: #fff;
+    /* Replace the existing background-image with your desired image URL */
+    background-image: url('backgroundImage.png');
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Keep the background fixed during scroll */
 }
 
 a {
@@ -87,11 +92,22 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 2rem;
+    padding: 1rem 2rem;
 }
 
-.logo h1 {
+/* Updated logo styles */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo svg {
+    margin-right: 10px;
+}
+
+.company-name {
     font-size: 1.8rem;
+    font-weight: bold;
     color: var(--primary-color);
 }
 
@@ -131,7 +147,7 @@ nav ul li a.active {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/random/1600x900/?business');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/random/1600x900/?children,books');
     background-size: cover;
     background-position: center;
     height: 80vh;
@@ -160,6 +176,8 @@ nav ul li a.active {
 .services {
     padding: 5rem 0;
     background: var(--light-color);
+    /* Semi-transparent background to let the pattern show through slightly */
+    background-color: rgba(244, 249, 255, 0.9);
 }
 
 .services-grid {
@@ -195,6 +213,8 @@ nav ul li a.active {
 /* About Section */
 .about {
     padding: 5rem 0;
+    /* Semi-transparent background to let the pattern show through slightly */
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .about-content {
@@ -225,10 +245,22 @@ nav ul li a.active {
     margin-bottom: 1.5rem;
 }
 
+.about-image {
+    text-align: center; /* Center the image */
+}
+
+.about-image img {
+    max-width: 100%; /* Make sure the image fits within its container */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Add rounded corners if desired */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for visual appeal */
+}
 /* Contact Section */
 .contact {
     padding: 5rem 0;
     background: var(--light-color);
+    /* Semi-transparent background to let the pattern show through slightly */
+    background-color: rgba(244, 249, 255, 0.9);
 }
 
 .contact-content {
