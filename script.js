@@ -43,29 +43,87 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the default way
             
-            // Get form data
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
+            // Get the submit button and store its original text
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
             
-            // In a real implementation, you would send this data to a server
-            // For this template, we'll just log it and show an alert
-            console.log({
-                name,
-                email,
-                subject,
-                message
-            });
-            
-            alert('Thank you for your message! In a real implementation, this would be sent to the server.');
-            
-            // Reset form
-            contactForm.reset();
+            // Collect form data
+            var formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                website: 'writereadsucceed.com.au' // Fixed variable
+            };
+
+            // Send the email using EmailJS
+            emailjs.send('service_gxc3fee', 'template_ks3m9wa', formData)
+                .then(() => {
+                    console.log('SUCCESS!');
+                    showNotification(
+                        'Message Sent!', 
+                        'Your message has been sent successfully. We will get back to you soon.',
+                        'success'
+                    );
+                    // Reset the form
+                    document.getElementById('contactForm').reset();
+                }, (error) => {
+                    console.log('FAILED...', error);
+                    showNotification(
+                        'Error', 
+                        'Sorry, there was a problem sending your message. Please try again later.',
+                        'error'
+                    );
+                })
+                .finally(() => {
+                    // Reset button state
+                    submitButton.textContent = originalButtonText;
+                    submitButton.disabled = false;
+                });
         });
+    }
+
+    // Function to show the notification modal
+    function showNotification(title, message, type) {
+        const modal = document.getElementById('notificationModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalMessage = document.getElementById('modalMessage');
+        const modalContent = modal.querySelector('.modal-content');
+        
+        // Set modal content
+        modalTitle.textContent = title;
+        modalMessage.textContent = message;
+        
+        // Set modal type (success or error)
+        modalContent.className = 'modal-content ' + type;
+        
+        // Show the modal
+        modal.style.display = 'block';
+        
+        // Set up close button
+        const closeButton = modal.querySelector('.close-button');
+        closeButton.onclick = function() {
+            modal.style.display = 'none';
+        }
+        
+        // Close when clicking outside the modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+        
+        // Automatically close after 5 seconds
+        setTimeout(function() {
+            if (modal.style.display === 'block') {
+                modal.style.display = 'none';
+            }
+        }, 5000);
     }
 
     // Active navigation highlighting based on scroll position

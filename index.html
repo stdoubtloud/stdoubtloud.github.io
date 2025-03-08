@@ -91,7 +91,7 @@
                     <p>Our team consists of fully accredited education specialists with advanced training in literacy development and learning support. All our practitioners hold relevant degrees in education or related fields, specialized certifications in literacy intervention, and extensive classroom experience.</p>
                     
                     <h3>Our Impact</h3>
-                    <p>Since our founding in 2018, we've helped over 750 children develop crucial literacy skills. Our intervention programs consistently show measurable improvement, with 92% of our students demonstrating significant growth in reading proficiency within the first three months of enrollment.</p>
+                    <p>Since our founding in 2018, we've helped children develop crucial literacy skills. Our intervention programs consistently show measurable improvement, with our students demonstrating significant growth in reading proficiency within the first three months of enrollment.</p>
                 </div>
             </div>
         </div>
@@ -111,7 +111,7 @@
                     </div>
                     <div class="contact-item">
                         <h3>Email</h3>
-                        <p>info@writereadssucceed.com.au</p>
+                        <p><a href="mailto:admin@writereadsucceed.com.au?subject=WriteReadSucceed%20Inquiry&body=Hi%2C%0A%0AI%20am%20contacting%20you%20regarding...">admin@writereadsucceed.com.au</a></p>
                     </div>
                     <div class="contact-item">
                         <h3>Phone</h3>
@@ -119,29 +119,38 @@
                     </div>
                     <div class="contact-item">
                         <h3>Session Hours</h3>
-                        <p>Monday - Friday: 7am - 9am & 3pm - 6pm</p>
+                        <p>Monday - Friday: 7am - 6pm</p>
                         <p>Saturday: 9am - 3pm</p>
                         <p>Sunday: Closed</p>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Parent/Guardian Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Child's Age and Needs" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Additional Information About Your Child" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Request Initial Consultation</button>
-                    </form>
-                </div>
-            </div>
+					<form id="contactForm"> 
+						<div class="form-group"> 
+							<input type="text" id="name" name="name" placeholder="Parent/Guardian Name" required> 
+						</div> 
+						<div class="form-group"> 
+							<input type="email" id="email" name="email" placeholder="Your Email" required> 
+						</div> 
+						<div class="form-group"> 
+							<input type="text" id="subject" name="subject" placeholder="Child's Age and Needs" required> 
+						</div> 
+						<div class="form-group"> 
+							<textarea id="message" name="message" placeholder="Additional Information About Your Child" required></textarea> 
+						</div> 
+						<button type="submit" class="btn">Request Initial Consultation</button> 
+					</form> 
+				</div>
+				
+				<div id="notificationModal" class="modal" style="display: none;">
+					<div class="modal-content">
+					<span class="close-button">&times;</span>
+					<div class="modal-icon"></div>
+					<h2 id="modalTitle">Message Status</h2>
+					<p id="modalMessage"></p>
+				</div>
+</div>
+
         </div>
     </section>
 
@@ -178,5 +187,16 @@
     </footer>
 
     <script src="script.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "QSRBjmA_UPQUL-zVk",
+            });
+        })();
+    </script>
+
+
 </body>
 </html>
