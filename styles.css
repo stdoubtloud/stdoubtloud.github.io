@@ -108,8 +108,25 @@ header .container {
 .company-name {
     font-size: 1.8rem;
     font-weight: bold;
-    color: var(--primary-color);
 }
+
+.company-name .write {
+    color: #60893aff; 
+}
+
+.company-name .read {
+    color: #008080ff;
+}
+
+.company-name .succeed {
+    color: #fd910dff; 
+}
+
+.company-name .comau {
+	font-size: 1.4rem;
+    color: #9f9f9fff; 
+}
+
 
 nav ul {
     display: flex;
