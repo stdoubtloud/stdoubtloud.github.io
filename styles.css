@@ -24,7 +24,7 @@ body {
     color: var(--dark-color);
     background-color: #fff;
     /* Replace the existing background-image with your desired image URL */
-    background-image: url('backgroundImage.png');
+    background-image: url('backgroundImage3.png');
     background-size: cover; /* Ensure the image covers the entire background */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-attachment: fixed; /* Keep the background fixed during scroll */
