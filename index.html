@@ -129,21 +129,30 @@
                     </div>
                 </div>
                 <div class="contact-form">
-					<form id="contactForm"> 
-						<div class="form-group"> 
-							<input type="text" id="name" name="name" placeholder="Parent/Guardian Name" required> 
-						</div> 
-						<div class="form-group"> 
-							<input type="email" id="email" name="email" placeholder="Your Email" required> 
-						</div> 
-						<div class="form-group"> 
-							<input type="text" id="subject" name="subject" placeholder="Child's Age and Needs" required> 
-						</div> 
-						<div class="form-group"> 
-							<textarea id="message" name="message" placeholder="Additional Information About Your Child" required></textarea> 
-						</div> 
-						<button type="submit" class="btn">Request Initial Consultation</button> 
-					</form> 
+				<form id="contactForm" onsubmit="return validateMath()">
+					<div class="form-group"> 
+						<input type="text" id="name" name="name" placeholder="Parent/Guardian Name" required> 
+					</div> 
+					<div class="form-group"> 
+						<input type="email" id="email" name="email" placeholder="Your Email" required> 
+					</div> 
+					<div class="form-group"> 
+						<input type="text" id="subject" name="subject" placeholder="Child's Age and Needs" required> 
+					</div> 
+					<div class="form-group"> 
+						<textarea id="message" name="message" placeholder="Additional Information About Your Child" required></textarea> 
+					</div> 
+
+					<!-- Math Problem Section -->
+					<div class="form-group">
+						<label for="mathProblem">Please answer this simple maths problem to prove you aren't a robot! (answer with numerals):<p></label>
+						<span id="mathProblem"></span>
+						<input type="number" id="mathAnswer" name="mathAnswer" placeholder="Your Answer" required>
+					</div>
+
+					<button type="submit" class="btn">Request Initial Consultation</button> 
+				</form>
+
 				</div>
 				
 				<div id="notificationModal" class="modal" style="display: none;">

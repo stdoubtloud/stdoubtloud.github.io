@@ -127,7 +127,40 @@ header .container {
     color: #9f9f9fff; 
 }
 
+#mathProblem {
+        font-weight: bold;
+        margin-left: 5px;
+    }
 
+@media (max-width: 600px) {
+    .btn {
+        font-size: 14px;
+    }
+    .hero-content h2 {
+        font-size: 24px;
+    }
+}
+.ok-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green for success */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.ok-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.btn:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    transition: 0.3s ease-in-out;
+}
 nav ul {
     display: flex;
 }
