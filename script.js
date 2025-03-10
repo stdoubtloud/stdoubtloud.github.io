@@ -147,36 +147,65 @@ function showNotification(title, message, type) {
 }
 	 let num1, num2, correctAnswer;
 
-		// Generate a random math problem when the page loads
-		function generateMathProblem() {
-			// Mapping numbers to their text equivalents
-			const numberTextMap = {
-				1: "one",
-				2: "two",
-				3: "three",
-				4: "four",
-				5: "five",
-				6: "six",
-				7: "seven",
-				8: "eight",
-				9: "nine",
-				10: "ten"
-			};
+function generateMathProblem() {
+    // Mapping numbers to their custom SVG vector representations
+    const numberSvgMap = {
+        1: `<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 35 L20 10 L15 15" stroke="black" stroke-width="2" fill="none" />
+            </svg>`,
+        2: `<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 15 C15 10, 30 10, 30 20 S15 35, 10 35 h 20" stroke="black" stroke-width="2" fill="none" />
+            </svg>`,
+        3: `<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 10 C30 5, 30 15, 15 20 C30 25, 30 35, 15 35" stroke="black" stroke-width="2" fill="none" />
+            </svg>`,
+        4: `<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 35 L25 10 L10 25 H30" stroke="black" stroke-width="2" fill="none" />
+            </svg>`,
+        5: `<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 10 H10 V20 Q20 15, 30 25 Q20 35, 10 35" stroke="black" stroke-width="2" fill="none" />
+            </svg>`,
+        6: `<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 10 Q10 10, 10 25 Q10 38, 20 38 Q35 38, 30 30 Q 20 15 10 25" stroke="black" stroke-width="2" fill="none" />
+            </svg>`,
+        7: `<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 10 H30 L15 35" stroke="black" stroke-width="2" fill="none" />
+            </svg>`,
+        8: `<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 10 Q10 15, 20 20 Q30 15, 20 10 Z M20 20 Q10 25, 20 30 Q30 25, 20 20 Z" stroke="black" stroke-width="2" fill="none" />
+            </svg>`,
+        9: `<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+				<path d="M20 10 Q10 10, 10 20 Q10 30, 20 30 Q30 30, 30 20 Q30 10, 20 10 Z M30 20 Q30 45, 10 35" stroke="black" stroke-width="2" fill="none" />
+			</svg>`,
+        10: `<svg width="80" height="40" xmlns="http://www.w3.org/2000/svg">
+				<!-- Number 1 -->
+				<path d="M20 35 L20 10 L15 15" stroke="black" stroke-width="2" fill="none" />
+				<!-- Number 0 -->
+				<path d="M40 10 Q30 20, 40 30 Q50 40, 60 30 Q70 20, 60 10 Q50 0, 40 10 Z" stroke="black" stroke-width="2" fill="none" />
+			</svg>`
+    };
 
-			// Generate random numbers
-			num1 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
-			num2 = Math.floor(Math.random() * 10) + 1;
+    // SVG for the "+" symbol
+    const plusSvg = `<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 10 V30 M10 20 H30" stroke="black" stroke-width="2" fill="none" />
+                    </svg>`;
 
-			// Get text representation of the numbers
-			const num1Text = numberTextMap[num1];
-			const num2Text = numberTextMap[num2];
+    // Generate random numbers
+    num1 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+    num2 = Math.floor(Math.random() * 10) + 1;
 
-			// Correct answer
-			correctAnswer = num1 + num2;
+    // Set the correct answer
+    correctAnswer = num1 + num2;
 
-			// Display the math problem in text format
-			document.getElementById('mathProblem').textContent = `${num1Text} + ${num2Text}`;
-		}
+    // Display the math problem using custom vector SVGs
+    const mathProblemElement = document.getElementById('mathProblem');
+    mathProblemElement.innerHTML = `
+        ${numberSvgMap[num1]}
+        ${plusSvg}
+        ${numberSvgMap[num2]}
+    `;
+}
+
 
 
 		// Validate the user's answer
