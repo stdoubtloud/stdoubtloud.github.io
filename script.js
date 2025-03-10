@@ -225,6 +225,7 @@ function generateMathProblem() {
 			document.getElementById('notificationModal').style.display = 'block'
 		}
 		// Generate the problem when the page loads
+		//document.addEventListener('DOMContentLoaded', generateMathProblem);
 		window.onload = generateMathProblem;
 
     // Active navigation highlighting based on scroll position
