@@ -105,7 +105,7 @@ header .container {
     margin-right: 10px;
 }
 .company-name object {
-    /* width: 80px; Adjust width as needed */
+    /* width: 80px; Adjust width as needed */ 
     height: 40px; /* Adjust height as needed */
     margin: 0 0px; /* Add spacing between logos */
     display: inline-block;
