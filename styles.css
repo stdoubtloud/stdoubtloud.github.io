@@ -104,13 +104,24 @@ header .container {
 .logo svg {
     margin-right: 10px;
 }
-
+.company-name object {
+    /* width: 80px; Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    margin: 0 0px; /* Add spacing between logos */
+    display: inline-block;
+    vertical-align: middle; /* Align with text */
+}
+.comau {
+    font-size: 14px;
+    vertical-align: middle;
+}
 .company-name {
     font-size: 1.8rem;
     font-weight: bold;
 }
 
 .company-name .write {
+	font-family: cursive, Arial, sans-serif;
     color: #60893aff; 
 }
 
@@ -122,10 +133,6 @@ header .container {
     color: #fd910dff; 
 }
 
-.company-name .comau {
-	font-size: 1.4rem;
-    color: #9f9f9fff; 
-}
 
 #mathProblem {
         font-weight: bold;
