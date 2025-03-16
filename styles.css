@@ -106,7 +106,7 @@ header .container {
 }
 .company-name object {
     /* width: 80px; Adjust width as needed */ 
-    height: 40px; /* Adjust height as needed */
+    height: 60px; /* Adjust height as needed */
     margin: 0 0px; /* Add spacing between logos */
     display: inline-block;
     vertical-align: middle; /* Align with text */
@@ -114,6 +114,7 @@ header .container {
 .comau {
     font-size: 14px;
     vertical-align: middle;
+	color: grey;
 }
 .company-name {
     font-size: 1.8rem;
